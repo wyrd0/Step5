@@ -19,17 +19,21 @@ namespace Step5
             //Index string 
             int sLength = userString.Length;
             int index = sLength - 1;
-
+            Console.WriteLine("         ");
+            Console.WriteLine("______________________________");
+            Console.WriteLine("         ");
             //Display string in reverse
             for (int i = index; i >= 0; i--)
             {
-               Console.WriteLine(userString[i]);
+               Console.WriteLine("       " + userString[i]);
               //  string[] outString = userString[i index];
             }
-           
+            Console.WriteLine("         ");
+            Console.WriteLine("______________________________");
+            Console.WriteLine("         ");
             //Display on a single line :|
             //Console.WriteLine(outString);            
-                  
+
         }
     }
 }

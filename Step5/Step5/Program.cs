@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Step5
 {
@@ -16,16 +12,35 @@ namespace Step5
             
             //Ensure string is a set of integers
 
+            { try
+                {
+                    int userNum = Convert.ToInt32(userString);
+                    Console.WriteLine(userNum);
+                }
+                catch(Exception)
+                {
+                    Console.WriteLine("That's a nice string of characters.  Please enter a number:    ");
+                }
+                }
+
+            
+            
+            
+            
+            
             //Index string 
             int sLength = userString.Length;
             int index = sLength - 1;
             Console.WriteLine("         ");
             Console.WriteLine("______________________________");
             Console.WriteLine("         ");
+
+                   
+                       
             //Display string in reverse
-            for (int i = index; i >= 0; i--)
+           for (int i = index; i >= 0; i--)
             {
-               Console.WriteLine("       " + userString[i]);
+              Console.WriteLine("       " + userString[i]);
               //  string[] outString = userString[i index];
             }
             Console.WriteLine("         ");

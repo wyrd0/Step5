@@ -15,12 +15,18 @@ namespace Step5
             string userString = Console.ReadLine();
             Console.WriteLine(userString);
 
-            //Try to index string
+            //Index string
             int sLength = userString.Length;
-            Console.WriteLine("sLength =" + sLength);
-            foreach (int tempVar in userString)
+            int index = sLength - 1;
+
+            for (int i = index; i >= 0; i--)
             {
-                Console.WriteLine(tempVar);
+                Console.WriteLine(userString[i]);
+            }
+
+             //   foreach (int tempVar in userString)
+            {
+               // Console.WriteLine(tempVar);
             }
             //Ensure string is a set of integers
             int[] userNum = new int[userString.Length];

@@ -7,30 +7,33 @@ namespace Step5
         static void Main(string[] args)
         {
             //Get user input string
-            Console.WriteLine("Please enter a number and press ENTER:     ");
-            string userString = Console.ReadLine();
-            
-            //Ensure string is a set of integers
-
-            { try
+            bool isNum = true;
+            do
+            {
+                
+                Console.WriteLine("Please enter a number and press ENTER:     ");
+                string userString = Console.ReadLine();
+                //Ensure string is a set of integers
                 {
-                    int userNum = Convert.ToInt32(userString);
-                    Console.WriteLine(userNum);
-                }
-                catch(Exception)
-                {
-                    Console.WriteLine("That's a nice string of characters.  Please enter a number:    ");
-                }
+                    try
+                    {
+                        int userNum = Convert.ToInt32(userString);
+                    }
+                    catch (Exception)
+                    {
+                        isNum = false;
+                        Console.WriteLine("That's a nice string of characters, but we're looking for a number.");
+                    }
                 }
 
+            } while (isNum == false);
+
+
+
+
+
+            //  { //Index string 
             
-            
-            
-            
-            
-            //Index string 
-            int sLength = userString.Length;
-            int index = sLength - 1;
             Console.WriteLine("         ");
             Console.WriteLine("______________________________");
             Console.WriteLine("         ");
@@ -38,16 +41,16 @@ namespace Step5
                    
                        
             //Display string in reverse
-           for (int i = index; i >= 0; i--)
+          // for (int i = index; i >= 0; i--)
             {
-              Console.WriteLine("       " + userString[i]);
+            //  Console.WriteLine("       " + userString[i]);
               //  string[] outString = userString[i index];
             }
             Console.WriteLine("         ");
             Console.WriteLine("______________________________");
             Console.WriteLine("         ");
             //Display on a single line :|
-            //Console.WriteLine(outString);            
+            //Console.WriteLine(outString); }           
 
         }
     }

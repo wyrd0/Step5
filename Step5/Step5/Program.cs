@@ -10,29 +10,26 @@ namespace Step5
     {
         static void Main(string[] args)
         {
-            //Get user input into an array
+            //Get user input string
             Console.WriteLine("Please enter a number and press ENTER:     ");
             string userString = Console.ReadLine();
-            Console.WriteLine(userString);
+            
+            //Ensure string is a set of integers
 
-            //Index string
+            //Index string 
             int sLength = userString.Length;
             int index = sLength - 1;
 
+            //Display string in reverse
             for (int i = index; i >= 0; i--)
             {
-                Console.WriteLine(userString[i]);
+               Console.WriteLine(userString[i]);
+              //  string[] outString = userString[i index];
             }
-
-             //   foreach (int tempVar in userString)
-            {
-               // Console.WriteLine(tempVar);
-            }
-            //Ensure string is a set of integers
-            int[] userNum = new int[userString.Length];
-            //Console.WriteLine(new[]);
-            //Manipulate data type, if necessary
-            //Display input array in reverse0
+           
+            //Display on a single line :|
+            //Console.WriteLine(outString);            
+                  
         }
     }
 }
